@@ -1,7 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Table, Alert, Spinner } from 'react-bootstrap';
 
-const FilesTable = ({ data, loading, error }) => {
+const FilesTable = () => {
+  const { data, loading, error } = useSelector(state => state.files);
+  
   const flattenedData = Array.isArray(data) ? data.flatMap(fileData => {
     if (!fileData || !Array.isArray(fileData.lines)) return [];
     return fileData.lines.map(line => ({

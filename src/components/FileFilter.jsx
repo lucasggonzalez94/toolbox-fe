@@ -1,12 +1,18 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Form, InputGroup, Button } from 'react-bootstrap';
+import { setFilterName } from '../redux/slices/filesSlice';
 
-const FileFilter = ({ value, onChange }) => {
+const FileFilter = () => {
+  const dispatch = useDispatch();
+  const { filterName: value } = useSelector(state => state.files);
+  
+  const onChange = (e) => {
+    dispatch(setFilterName(e.target.value));
+  };
+  
   const handleClear = () => {
-    const event = {
-      target: { value: '' }
-    };
-    onChange(event);
+    dispatch(setFilterName(''));
   };
 
   return (
