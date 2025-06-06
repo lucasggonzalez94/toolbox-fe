@@ -1,12 +1,40 @@
-# React + Vite
+# Toolbox Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación frontend desarrollada con React que consume la API del backend Toolbox. La aplicación muestra una tabla con información de archivos CSV procesados.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js 16 o superior
+- API backend ejecutándose en http://localhost:3000
 
-## Expanding the ESLint configuration
+## Instalación
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clonar el repositorio
+
+```bash
+git clone https://github.com/tu-usuario/toolbox-fe.git
+cd toolbox-fe
+```
+
+2. Instalar dependencias
+
+```bash
+npm install
+```
+
+## Ejecución
+
+Para ejecutar la aplicación en modo desarrollo:
+
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en http://localhost:5173
+
+## Características
+
+- Visualización de datos de archivos en una tabla
+- Filtrado de archivos por nombre
+- Interfaz responsiva utilizando React Bootstrap
+- Programación funcional y uso de React Hooks
